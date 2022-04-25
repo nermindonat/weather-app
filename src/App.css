@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-image: url("./assets/1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
+  font-family: "Sans sarif", sans-serif;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app p {
+  margin: 5px;
+}
+
+/*header image and h1*/
+.header {
+  display: flex;
+  flex-direction: row;
+
+}
+
+h1,h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 35px;
+  margin-left: 10px;
+}
+
+/*dropdown */
+#name {
+  font-family: sans-serif;
+  background-color: rgb(91, 215, 215);
+  color: white;
+  border: none;
+}
+
+form {
+  width: 15%;
+  height: 80px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+}
+
+form select {
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+form select:focus {
+  outline: none;
+}
+
+.weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 40vh;
+}
+.weather-card .weather-item {
+  flex-basis: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  padding: 10px 0;
+  background-color: rgb(91, 215, 215);
+}
+
+/* içinde bulunduğumuz gün, bir background ve border ile belirginleştirilmelidir. */
+.weather-card .weather-item:nth-child(1){
+  border: 4px solid #cbb6b0;
+}
+
+.weather-item .description {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.weather-item .day,
+.weather-item .temp-max {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ea6c4d
 }
