@@ -1,1 +1,1 @@
-React ile anlık hava durumu bilgilerinin seçilen ile bağlı olarak getirilmesi.
+React ile anlık hava durumu bilgilerinin seçilen şehir bağlı olarak getirilmesi.
